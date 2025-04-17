@@ -94,6 +94,35 @@ h6 {
   color: white !important;
 }
 
+/* Стили для navmenu с классом .votaidi */
+.votaidi ul {
+  display: flex; /* Выстраиваем элементы в ряд */
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем отступы */
+  margin-top: -50px; /* Убираем внешние отступы */
+}
+
+.votaidi li {
+  margin-right: 20px; /* Отступ между элементами */
+}
+
+.votaidi a {
+  color: #ffc107; /* Желтый цвет текста */
+  font-weight: 700; /* Жирный шрифт */
+  text-decoration: none; /* Убираем подчеркивание */
+  padding: 10px 15px; /* Добавляем немного внутреннего отступа */
+  transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.votaidi a:hover,
+.votaidi .active {
+  color: #ffc107; /* Оставляем желтый цвет при наведении */
+}
+
+/* Дополнительные стили для мобильной версии */
+.votaidi .mobile-nav-toggle {
+  display: none; /* Скрываем иконку меню, если она не нужна */
+}
 
 
 /* PHP Email Form Messages
