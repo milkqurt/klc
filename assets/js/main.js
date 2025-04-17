@@ -48,6 +48,26 @@
 
   });
 
+  let lastScrollTop = 0;
+const header = document.querySelector('.header');
+const navmenu = document.querySelector('.navmenu');
+
+window.addEventListener('scroll', function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Прокрутка вниз — скрываем хедер и навигацию
+    header.classList.add('hidden');
+    navmenu.classList.add('hidden');
+  } else {
+    // Прокрутка вверх — показываем хедер и навигацию
+    header.classList.remove('hidden');
+    navmenu.classList.remove('hidden');
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Для предотвращения отрицательного значения
+});
+
   /**
    * Toggle mobile nav dropdowns
    */
