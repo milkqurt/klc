@@ -148,19 +148,46 @@ h6 {
   }
 }
 
+.hidden {
+  top: -100%; /* Скрываем за пределы экрана */
+}
+
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #ffc107;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  color: var(--default-color);
-  background-color: var(--background-color);
+  background: linear-gradient(to right, #ffc107 50%, transparent 50%);
+  color: #fff;
   padding: 15px 0;
+  margin-top: 20px;
   transition: all 0.5s;
   z-index: 997;
+  /* position: relative; */
+   /* position: fixed; */
+   /* position: relative; */
 }
+
+.header.hidden {
+  display: none; /* Скрываем хедер на других секциях */
+}
+
+.navmenu {
+  margin-top: -60px; /* Можешь менять значение по вкусу */
+}
+
+/* .header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; 
+  height: 100%;
+  background-color: var(--background-color);
+  z-index: -1; /* Чтобы фон был сзади */
+  /* pointer-events: none; Чтобы не мешал кликам */
+/* } */ 
+
 
 .header .logo {
   line-height: 1;
@@ -179,14 +206,14 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px  #ffc107;
+  /* box-shadow: 0px 0 18px  #ffc107; */
 }
 
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
   /* --background-color: rgba(0, 0, 0, 0.8); */
-  background-color: #ffc107;
+  /* background-color: #ffc107; */
 }
 
 /*--------------------------------------------------------------
@@ -222,6 +249,16 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+    color: #ffc107; 
+    font-weight: 700; 
+  }
+
+  @media (max-width: 1199px) {
+    .navmenu a,
+    .navmenu a:focus {
+      color: #ffc107; /* Желтый цвет */
+      font-weight: 700; /* Жирный шрифт */
+    }
   }
 
   .navmenu a i,
@@ -299,13 +336,6 @@ h6 {
   }
 }
 
-  @media screen and (max-width: 768px) {
-    .hero-bg {
-      filter: brightness(0.7); /* Затемнение для мобильных устройств */
-    }
-  }
-
-
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
@@ -366,6 +396,18 @@ h6 {
     background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
   }
 
+  @media screen and (max-width: 768px) {
+    .hero-bg {
+      filter: brightness(0.7); /* Затемнение для мобильных устройств */
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+    .hero-bg {
+      filter: brightness(0.5); /* Более сильное затемнение для десктопа */
+    }
+  }
+
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
     background-color: var(--accent-color);
@@ -411,7 +453,7 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: #ffc107;
     position: absolute;
     font-size: 32px;
     top: 15px;
