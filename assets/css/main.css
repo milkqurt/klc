@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #666666; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #333333; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #dada2c; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #ffc107; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -34,7 +34,7 @@
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #666666; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #dada2c; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #ffc107; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -152,7 +152,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #dada2c;
+  --background-color: #ffc107;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
@@ -179,14 +179,14 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px  rgb(218, 218, 44);
+  box-shadow: 0px 0 18px  #ffc107;
 }
 
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
   /* --background-color: rgba(0, 0, 0, 0.8); */
-  background-color: rgb(218, 218, 44);
+  background-color: #ffc107;
 }
 
 /*--------------------------------------------------------------
