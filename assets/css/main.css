@@ -304,12 +304,6 @@ h6 {
       filter: brightness(0.7); /* Затемнение для мобильных устройств */
     }
   }
-  
-  @media screen and (min-width: 769px) {
-    .hero-bg {
-      filter: brightness(0.5); /* Более сильное затемнение для десктопа */
-    }
-  }
 
 
 /* Navmenu - Mobile */
